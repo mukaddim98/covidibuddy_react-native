@@ -2,6 +2,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import Dashboard from "../screens/dashboard";
 import Challenges from "../screens/challenges";
+import Leaderboard from "../screens/leaderboard";
 
 const screens = {
   Dashboard: {
@@ -14,6 +15,12 @@ const screens = {
     screen: Challenges,
     navigationOptions: {
       title: "Challenges",
+    },
+  },
+  Leaderboard: {
+    screen: Leaderboard,
+    navigationOptions: {
+      title: "Leaderboard",
     },
   },
 };
