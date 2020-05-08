@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "covidibuddy",
-    "slug": "covidibuddy",
+    "name": "gamezone",
+    "slug": "gamezone",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android",
