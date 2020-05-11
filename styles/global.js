@@ -13,7 +13,7 @@ export const globalStyles = StyleSheet.create({
   container: {
     padding: 20,
     margin: 10,
-    backgroundColor: "red",
+    backgroundColor: "orange",
   },
   outerContainer: {
     flex: 2,

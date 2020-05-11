@@ -32,17 +32,28 @@ export default function LeaderboardSnippet({ navigation }) {
   ]);
 
   return (
-    <View style={globalStyles.container}>
+    <TouchableOpacity
+      style={globalStyles.container}
+      onPress={() => navigation.navigate("Leaderboard")}
+    >
+      <TouchableOpacity>
+        <Text
+          style={globalStyles.titleText}
+          onPress={() => navigation.navigate("Leaderboard")}
+        >
+          Leaderboard
+        </Text>
+      </TouchableOpacity>
       <FlatList
         data={player}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate("Leaderboard", item)}
+            onPress={() => navigation.navigate("IndvPlayers", item)}
           >
-            <Text style={globalStyles.titleText}>{item.name}</Text>
+            <Text>{item.name}</Text>
           </TouchableOpacity>
         )}
       />
-    </View>
+    </TouchableOpacity>
   );
 }

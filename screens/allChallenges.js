@@ -9,7 +9,7 @@ import {
 import { globalStyles } from "../styles/global";
 import { v4 as uuid } from "uuid";
 
-export default function ChallengesSnippet({ navigation }) {
+export default function AllChallenges({ navigation }) {
   const [challenge, setChallenge] = useState([
     {
       title: "Challenge 1",
@@ -29,29 +29,35 @@ export default function ChallengesSnippet({ navigation }) {
       body: "Challenge 3 description",
       key: uuid(),
     },
+    {
+      title: "Challenge 4",
+      points: 100,
+      body: "Challenge 4 description",
+      key: uuid(),
+    },
+    {
+      title: "Challenge 5",
+      points: 100,
+      body: "Challenge 5 description",
+      key: uuid(),
+    },
+    {
+      title: "Challenge 6",
+      points: 100,
+      body: "Challenge 6 description",
+      key: uuid(),
+    },
   ]);
 
   return (
-    <TouchableOpacity
-      style={globalStyles.container}
-      onPress={() => navigation.navigate("AllChallenges")}
-    >
-      <TouchableOpacity>
-        <Text
-          style={globalStyles.titleText}
-          onPress={() => navigation.navigate("AllChallenges")}
-        >
-          Challenges
-        </Text>
-      </TouchableOpacity>
-
+    <TouchableOpacity style={globalStyles.container}>
       <FlatList
         data={challenge}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate("IndvChallenges", item)}
           >
-            <Text>{item.title}</Text>
+            <Text style={globalStyles.titleText}>{item.title}</Text>
           </TouchableOpacity>
         )}
       />
